@@ -814,7 +814,7 @@ const projectsData = {
         challenge: 'Encontrar un regalo único suele ser frustrante: búsquedas largas, poca inspiración y opciones repetitivas. Había que simplificar ese proceso con propuestas creativas y personalizadas, usando la calidez del comercio local en un entorno digital.',
         logo:   'image/retelier/retelierlogo.webp',
         portada: 'image/retelier/propuestas2.png',
-        image1: 'image/retelier/retelierprimera.webp', 
+        image1: 'image/retelier/Retelierprimera.webp', 
         image2: 'image/retelier/coloresretelier.png',
         image3: 'image/retelier/responsive.webp',
         image4: 'image/retelier/UserFlow.webp',
@@ -1325,3 +1325,4 @@ syncThemeColorWithBackground()        // Sincronizar automático
 // Ejecutar al cargar y en resize
 window.addEventListener('load', updateNotificationText);
 window.addEventListener('resize', updateNotificationText);
+
