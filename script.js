@@ -818,7 +818,7 @@ const projectsData = {
         image2: 'image/retelier/coloresretelier.png',
         image3: 'image/retelier/responsive.webp',
         image4: 'image/retelier/UserFlow.webp',
-        image5: 'image/retelier/premioad.webp',
+        image5: 'image/retelier/PremioAd.webp',
         image6: 'image/retelier/fotopremios.webp',
         image7: 'image/retelier/premiogeneralitat.webp',
         image8: 'image/retelier/selecciongustos.webp',
@@ -1325,5 +1325,6 @@ syncThemeColorWithBackground()        // Sincronizar automático
 // Ejecutar al cargar y en resize
 window.addEventListener('load', updateNotificationText);
 window.addEventListener('resize', updateNotificationText);
+
 
 
