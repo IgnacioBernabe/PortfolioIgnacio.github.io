@@ -1326,3 +1326,4 @@ syncThemeColorWithBackground()        // Sincronizar automático
 window.addEventListener('load', updateNotificationText);
 window.addEventListener('resize', updateNotificationText);
 
+
