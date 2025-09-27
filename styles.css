@@ -368,7 +368,6 @@ opacity: 0;
     
     .myself-right {
         grid-column: 1;
-        margin-top: 2rem;
         padding: 2rem 0;
         
     }
@@ -389,12 +388,17 @@ opacity: 0;
     }
 }
 
+
+/* Móvil */
+/* Móvil */
 /* Móvil */
 @media (max-width: 480px) {
     .myself {
         padding: 0 1rem;
         margin-top: 3rem;
         min-height: 40vh;
+        position: relative;
+        z-index: 1;
     }
     
     .myself-left {
@@ -410,17 +414,50 @@ opacity: 0;
     .myself-left h2 {
         font-size: 0.8rem;
     }
-
+    
     .myself-right {
         padding: 1.5rem 0;
+        position: relative;
+        z-index: 2;
+        overflow: hidden; /* NUEVO: Contener cualquier desbordamiento */
     }
     
     .video-container {
         max-width: 100%;
         border-radius: 0.5rem;
+        height: 280px; /* Volver a un tamaño más controlado */
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden; /* CAMBIO: Volver a hidden para contener */
+        display: flex;
+        align-items: center; /* CAMBIO: Centrar verticalmente */
+        justify-content: center; /* NUEVO: Centrar horizontalmente */
+        z-index: 3;
     }
-
+    
+    .video-container img {
+        width: 100%; /* Mantener al 100% */
+        height: 100%; /* CAMBIO: Llenar el container completo */
+        object-fit: cover; /* CAMBIO: De contain a cover para llenar mejor */
+        display: block;
+        border-radius: inherit;
+        position: relative;
+        top: 0; /* RESET: Eliminar desplazamiento vertical */
+        left: 0; /* RESET: Eliminar desplazamiento horizontal */
+        transform: none; /* RESET: Eliminar el scale que causaba problemas */
+        transform-origin: center;
+        z-index: 4;
+    }
+    
+    /* Asegurar separación del siguiente container */
+    .recent-jobs-screen {
+        margin-top: 2rem;
+        position: relative;
+        z-index: 1;
+        background-color: var(--body-bg-color);
+    }
 }
+
 
 
 
@@ -510,7 +547,6 @@ opacity: 0;
     transform: translateY(100%);
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto !important; /* Forzar scroll nativo */
-    -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
 }
 
 
@@ -984,18 +1020,26 @@ opacity: 0;
         min-height: 250px;
     }
     .single-image-container {
-        height: 25vh;
-        margin: 2rem 0 2rem 0;
+        height: 40vh;
+        margin: 1rem 0 1rem 0;
     }
 
     .three-images-container {
         gap: 0.75rem;
-        margin: 2rem 0 2rem 0;
+        margin: 1rem 0 0 0;
     }
     
     .image-item {
         height: 35vh;
         min-height: 200px;
+    }
+
+    .image-showcase-container{
+        margin-bottom: 1rem;
+    }
+
+    .project-column-right{
+        min-height: 300px;
     }
 
 }
@@ -2345,8 +2389,9 @@ opacity: 0;
     }
 
     .services-outer-wrapper {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-top: 3rem;
     }
 
     .skills-left-column img {
@@ -2369,7 +2414,7 @@ opacity: 0;
     
 
     .recent-jobs{
-        padding: 0 2rem 0rem 2rem;
+        padding: 0 16px 0 16px;
     }
     
     .text-container {
@@ -2398,12 +2443,14 @@ opacity: 0;
     
     .recent-jobs h2 {
         font-size: clamp(3rem, 8vw, 4rem);
+        margin-bottom: 2rem;
     }
     
     .two-columns-container {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
         overflow-x: hidden;
+        padding:  0 16px 0 16px;
     }
     
     .column-left,
@@ -2436,8 +2483,10 @@ opacity: 0;
     /* Responsive para nuevos proyectos */
     .two-new-projects {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
+        padding:  0 16px 0 16px;
         overflow-x: hidden;
+        margin-top: 1rem;
     }
     
     .two-new-projects .project-card {
